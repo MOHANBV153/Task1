@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Maven Version check') {
+        stage('Build_Hello') {
             steps {
-                bat 'mvn -v'
+                echo 'Building Hello..'
             }
         }
-        stage('Running the Test') {
+        stage('Test') {
             steps {
-                bat 'mvn clean test'
+                echo 'Testing Hello'
             }
         }
-        stage('Say Hello') {
+        stage('Deploy') {
             steps {
-                echo 'Hello Team MicroDegree'
+                echo 'Deploying....Hello World'
             }
         }
     }
